@@ -1,2 +1,7 @@
-# Synthesis3d
-Algorithms for synthesis of 3d images. It includes the intersection of rays and objects; reflexion; direct and indirect lighting; and bounding boxes.
+# Synthesis of 3d images
+Algorithms for synthesis of 3d images.
+It includes:
+- The intersection of rays and objects;
+- Reflexion;
+- Direct and indirect lighting;
+- Bounding boxes.
