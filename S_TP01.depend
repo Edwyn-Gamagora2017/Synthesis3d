@@ -706,7 +706,7 @@
 1505830570 c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\ray.h
 	"vec3.h"
 
-1509818301 c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\boundingbox.h
+1509900352 c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\boundingbox.h
 	"raybox.cpp"
 	"RedBlackTree.cpp"
 	"vec3.h"
@@ -736,7 +736,7 @@
 1507112602 c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\pixel.h
 	"vec3.h"
 
-1509826954 source:c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\main.cpp
+1509900505 source:c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\main.cpp
 	<iostream>
 	<math.h>
 	"vec3.h"
@@ -786,7 +786,7 @@
 	<iostream>
 	<deque>
 
-1509823639 source:c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\scene.cpp
+1509900555 source:c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\scene.cpp
 	"scene.h"
 	"utils.h"
 	<iostream>
@@ -817,7 +817,7 @@
 	"math.h"
 	"utils.h"
 
-1509827079 source:c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\boundingbox.cpp
+1509900495 source:c:\users\edwyn luis\documents\lyon\gamagora\synthese_images\projetos\aula01\s_tp01 - 17-11-04\boundingbox.cpp
 	"BoundingBox.h"
 	<algorithm>
 

@@ -34,6 +34,7 @@ class BoundingBox
         void calculateSubBoxes();
         vec3 getCentre();
         vec3 getDimensions();
+        string toString( int level );
 
     protected:
         // Calculates the intersection between the box cube and a ray

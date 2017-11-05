@@ -51,11 +51,12 @@ void scene::calculateBoundingBoxes(){
 }*/
 
 std::experimental::optional<intersection_data> scene::intersection(ray * rayon) {
-	std::experimental::optional<intersection_data> intersection_minimun;
+	std::experimental::optional<intersection_data> intersection_minimun = {};
 
-    std::experimental::optional<intersection_data> intersectBounding = this->box->intersection(rayon, {});
-    if( intersectBounding ){
-        intersection_minimun = intersectBounding;
+    std::experimental::optional<intersection_data> intersectBoundingBox = this->box->intersection(rayon, {});
+
+    if( intersectBoundingBox ){
+        intersection_minimun = intersectBoundingBox;
     }
 
 	for (int i = 0; i < this->plans.size(); i++)

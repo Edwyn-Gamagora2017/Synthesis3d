@@ -28,6 +28,8 @@ BoundingBox::BoundingBox( std::deque<primitive*> interieur, interieurOrderAxe ax
         }
         else
         {
+            this->interieur = nullptr;
+
             int amountBoxes = 2;
             int amountObjPerBox = interieur.size()/amountBoxes;
             // Create the boxes inside : divide the list of objects
@@ -72,11 +74,12 @@ std::experimental::optional<intersection_data> BoundingBox::intersection(ray * r
             for (int i = 0; i < this->boxes.size(); i++)
             {
                 std::experimental::optional<intersection_data> intersectChild = this->boxes[i].intersection( rayon, intersection_minimun );
+
                 if( intersectChild && ( !intersection_minimun || (*intersectChild).getT() < (*intersection_minimun).getT() ) ){
                     intersection_minimun = intersectChild;
                 }
             }
-            if( (*intersection_minimun).getT() < (*previousIntersection).getT() ){
+            if( !previousIntersection || (*intersection_minimun).getT() < (*previousIntersection).getT() ){
                 return intersection_minimun;
             }
         }
@@ -100,7 +103,7 @@ std::experimental::optional<intersection_data> BoundingBox::intersectionBox( ray
     Ray r( orig, direc );
 
     float t;
-    std::experimental::optional<intersection_data> result;
+    std::experimental::optional<intersection_data> result = {};
     if( intersectBox->intersect( r, t ) )
     {
         vec3 pos = rayon->position( t );
@@ -151,4 +154,22 @@ vec3 BoundingBox::getCentre()
 vec3 BoundingBox::getDimensions()
 {
     return vec3( this->maxValues.getX()-this->minValues.getX(), this->maxValues.getY()-this->minValues.getY(), this->maxValues.getZ()-this->minValues.getZ() );
+}
+
+string BoundingBox::toString( int level )
+{
+    string result = "";
+    for(int i=0; i<level; i++){
+        result += "-";
+    }
+    if( this->interieur != nullptr ){
+        result += " OBJ\n";
+    }
+    else{
+        result += " BOX\n";
+        for( int i=0; i<this->boxes.size(); i++ ){
+            result += this->boxes[i].toString( level+1 );
+        }
+    }
+    return result;
 }

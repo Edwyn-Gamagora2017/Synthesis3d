@@ -115,7 +115,7 @@ int main()
 //* SCENE
     scene1->ajouterObjet( new sphere(10, vec3(0, -20, -50), couleurToAlbedo(vec3(255, 0, 0)), primitive::diffuse, 0.1));		// sphere
     scene1->ajouterObjet( new sphere(3, vec3(4, 4, -50), couleurToAlbedo(vec3(255, 0, 0)), primitive::diffuse, 0.1));		// sphere
-	//scene1->ajouterObjet(new sphere(5, vec3(10, -5, -50), couleurToAlbedo(vec3(255, 255, 0)), primitive::speculaire, 1));				// sphere petite - jaune
+	scene1->ajouterObjet(new sphere(5, vec3(10, -5, -50), couleurToAlbedo(vec3(255, 255, 0)), primitive::speculaire, 1));				// sphere petite - jaune
 	// murs
 	scene1->ajouterPlan(new plan(new vec3(0., -20., 0.), new vec3( 0.,1.,0. ), couleurToAlbedo(vec3( 0.,0.,255. )), primitive::diffuse, 0.1));   // sol
 	scene1->ajouterPlan(new plan(new vec3(0., +20., 0.), new vec3( 0.,-1.,0. ), couleurToAlbedo(vec3( 50.,150.,1. )), primitive::diffuse, 0.1));  // plafond
@@ -136,8 +136,8 @@ int main()
 	// Tableau
 	int w = 512;
 	int h = 512;
-	w = 64;
-	h = 64;
+//	w = 16;
+//	h = 16;
 	int fov = 60;
 
 	// initialisation
@@ -156,12 +156,12 @@ int main()
 //int j = 52;
 			vec3 direction = obtenirDirectionRayon(i, j, h, w, fov);
 			ray * rayCamera = new ray(origine, direction);
-
+//std::cout << "------------------------------ COR " << i << " " << j << std::endl;
 			// definir la couleur
 			colors[i][j].set(
                 albedoToCouleur( obtenirCouleur( rayCamera, scene1, 0, 0 ) )
 			);
-//std::cout << "COR " << i << " " << j << std::endl;
+
 
 			if( rayCamera != NULL )
                 delete rayCamera;
