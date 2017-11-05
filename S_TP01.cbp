@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="S_TP01" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/S_TP01" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../S_TP01" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/S_TP01" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="../S_TP01" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++11" />
+			<Add option="-fexceptions" />
+			<Add option="-std=c++1y" />
+		</Compiler>
+		<Unit filename="BoundingBox.cpp" />
+		<Unit filename="BoundingBox.h" />
+		<Unit filename="RedBlackTree.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Square.cpp" />
+		<Unit filename="Square.h" />
+		<Unit filename="geometry.h" />
+		<Unit filename="intersection_data.cpp" />
+		<Unit filename="intersection_data.h" />
+		<Unit filename="lumiere.cpp" />
+		<Unit filename="lumiere.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="pixel.cpp" />
+		<Unit filename="pixel.h" />
+		<Unit filename="plan.cpp" />
+		<Unit filename="plan.h" />
+		<Unit filename="primitive.cpp" />
+		<Unit filename="primitive.h" />
+		<Unit filename="ray.cpp" />
+		<Unit filename="ray.h" />
+		<Unit filename="raybox.cpp" />
+		<Unit filename="scene.cpp" />
+		<Unit filename="scene.h" />
+		<Unit filename="sphere.cpp" />
+		<Unit filename="sphere.h" />
+		<Unit filename="utils.cpp" />
+		<Unit filename="utils.h" />
+		<Unit filename="vec3.cpp" />
+		<Unit filename="vec3.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
