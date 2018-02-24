@@ -1,10 +1,13 @@
 # Synthesis of 3d images
 Algorithms for synthesis of 3d images.
 It includes:
-- The intersection of rays and objects;
+- The intersection of rays and objects (sphere and plane);
 - Reflexion;
-- Direct and indirect lighting;
+- Refraction;
+- Direct lighting;
 - Bounding boxes.
+
+TOOLS : C++ in a CodeBlocks project.
 
 ======
 TP 02 - Synthèse d'images
